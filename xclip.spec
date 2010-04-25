@@ -7,7 +7,9 @@ URL:            http://sourceforge.net/projects/xclip
 License:        GPLv2+
 Source0:        http://sourceforge.net/projects/xclip/files/xclip/0.12/%{name}-%{version}.tar.gz
 
-BuildRequires:	X11-devel
+BuildRequires:  X11-devel
+
+BuildRoot:      %_tmppath/%{name}-%{version}-%{release}
 
 %description
 xclip is a command line interface to the X11 clipboard. It can also be
@@ -29,5 +31,6 @@ rm -rf %buildroot
 rm -rf %buildroot
 
 %files
+%defattr(-,root,root,-)
 %_bindir/%{name}*
 %_mandir/man1/%{name}*.1.*
