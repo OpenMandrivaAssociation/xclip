@@ -1,6 +1,6 @@
 Name:           xclip
 Version:        0.12
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        A command line interface to the X11 clipboard
 Group:          Text tools
 URL:            http://sourceforge.net/projects/xclip
