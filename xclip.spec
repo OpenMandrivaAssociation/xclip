@@ -33,3 +33,20 @@ rm -rf %buildroot
 %defattr(-,root,root,-)
 %_bindir/%{name}*
 %_mandir/man1/%{name}*.1.*
+
+
+%changelog
+* Thu Feb 10 2011 Funda Wang <fwang@mandriva.org> 0.12-3mdv2011.0
++ Revision: 637140
+- tighten BR
+
+* Wed Dec 08 2010 Oden Eriksson <oeriksson@mandriva.com> 0.12-2mdv2011.0
++ Revision: 615509
+- the mass rebuild of 2010.1 packages
+
+* Sun Apr 25 2010 Rémy Clouard <shikamaru@mandriva.org> 0.12-1mdv2010.1
++ Revision: 538530
+- clean spec
+- import xclip
+
+
