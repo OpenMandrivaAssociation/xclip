@@ -6,8 +6,8 @@ Group:          Text tools
 URL:            http://sourceforge.net/projects/xclip
 License:        GPLv2+
 Source0:        http://sourceforge.net/projects/xclip/files/xclip/0.12/%{name}-%{version}.tar.gz
-BuildRequires:  libx11-devel
-BuildRequires:	libxmu-devel
+BuildRequires:  pkgconfig(x11)
+BuildRequires:	pkgconfig(xmu)
 BuildRoot:      %_tmppath/%{name}-%{version}-%{release}
 
 %description
