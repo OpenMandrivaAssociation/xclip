@@ -6,6 +6,11 @@ Group:          Text tools
 URL:            https://github.com/astrand/xclip
 License:        GPLv2+
 Source0:        https://github.com/astrand/xclip/archive/%{version}/%{name}-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  pkgconfig(x11)
 BuildRequires:	pkgconfig(xmu)
 
