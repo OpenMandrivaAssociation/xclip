@@ -1,17 +1,16 @@
-Name:           xclip
-Version:        0.13
-Release:        1
-Summary:        A command line interface to the X11 clipboard
-Group:          Text tools
-URL:            https://github.com/astrand/xclip
-License:        GPLv2+
-Source0:        https://github.com/astrand/xclip/archive/%{version}/%{name}-%{version}.tar.gz
+Name:		xclip
+Version:	0.13
+Release:	1
+Summary:	A command line interface to the X11 clipboard
+Group:		Text tools
+URL:		https://github.com/astrand/xclip
+License:	GPL-2.0-or-later
+Source0:	https://github.com/astrand/xclip/archive/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libtool-base
-BuildRequires:	slibtool
+BuildRequires:	gnu-config
 BuildRequires:	make
-BuildRequires:  pkgconfig(x11)
+BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xmu)
 
 %description
@@ -20,16 +19,18 @@ used for copying files, as an alternative to sftp/scp, thus avoiding
 password prompts when X11 forwarding has already been setup.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 autoreconf -fi
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
-%_bindir/%{name}*
-%_mandir/man1/%{name}*.1.*
+%license COPYING
+%doc README ChangeLog
+%{_bindir}/xclip*
+%{_mandir}/man1/xclip*.1*
