@@ -1,6 +1,6 @@
 Name:		xclip
 Version:	0.13
-Release:	1
+Release:	2
 Summary:	A command line interface to the X11 clipboard
 Group:		Text tools
 URL:		https://github.com/astrand/xclip
